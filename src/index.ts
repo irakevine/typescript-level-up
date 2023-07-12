@@ -1,4 +1,2 @@
-let numbers : number[]=[]
-    numbers.forEach (n=>n)
-  
-
+let user :[number , string]= [2,'Kevine']
+user.push(1)
