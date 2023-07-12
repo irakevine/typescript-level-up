@@ -8,11 +8,13 @@ CalculaterTax(10_000, 2022)
 
 
 //OBJECTS
- let Employee :{
-   readonly id:number,
-    name:string,
-    retire:(date:Date)=> void
-}= {
+type employee ={
+    readonly id:number,
+     name:string,
+     retire:(date:Date)=> void
+
+}
+ let Employee : employee ={
     id:1, 
     name:"Kellen",
     retire:(date:Date) => {  
