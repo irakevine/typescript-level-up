@@ -32,6 +32,7 @@
 //  KgTLbs(10)
 //  KgTLbs('30kg')
 
+// INTERSECTION TYPES 
 
 type Dragable = {
     drag:()=> void
@@ -45,3 +46,10 @@ drag:()=>{},
 size:()=>{}
 
 }
+
+// LITERAL TYPES
+
+type Quantity = 50  | 100 
+let quantity :Quantity = 100
+
+type Metric = 'cm' |'mm';
