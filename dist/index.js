@@ -1,3 +1,4 @@
 "use strict";
-let user = [2, 'Kevine'];
+let mysize = 2;
+console.log(mysize);
 //# sourceMappingURL=index.js.map

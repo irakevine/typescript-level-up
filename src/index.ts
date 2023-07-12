@@ -1,2 +1,3 @@
-let user :[number , string]= [2,'Kevine']
-user.push(1)
+const enum Size {Small= 1, Medium, Large}
+let mysize : Size = Size.Medium
+console.log(mysize);
