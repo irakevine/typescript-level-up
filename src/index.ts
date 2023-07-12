@@ -1,6 +1,6 @@
-let age : number= 20;
-if( age <50 )
-age+=10
-console.log(age);
+let sales = 2233_5454_45
+let course = 'typescript'
+let is_Published = true
+let level;
 
 
