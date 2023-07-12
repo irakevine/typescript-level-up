@@ -53,3 +53,15 @@ type Quantity = 50  | 100
 let quantity :Quantity = 100
 
 type Metric = 'cm' |'mm';
+
+// NULLABLE
+function greet(name: string | null | undefined){
+if (name ){
+    console.log(name.toUpperCase());
+    
+} else 
+console.log('holla');
+
+
+}
+greet(undefined)
