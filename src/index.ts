@@ -23,11 +23,25 @@
     
 //  }
 
-function KgTLbs(weight:number| string): number {
-    if (typeof weight === 'number' )
-    return weight * 2.22
-else 
- return parseInt(weight)*2.22
+// function KgTLbs(weight:number| string): number {
+//     if (typeof weight === 'number' )
+//     return weight * 2.22
+// else 
+//  return parseInt(weight)*2.22
+// }
+//  KgTLbs(10)
+//  KgTLbs('30kg')
+
+
+type Dragable = {
+    drag:()=> void
 }
- KgTLbs(10)
- KgTLbs('30kg')
+type Resizable ={
+    size:()=> void
+}
+type Uidev= Dragable & Resizable
+let Textbox: Uidev = { 
+drag:()=>{},
+size:()=>{}
+
+}
