@@ -1,10 +1,7 @@
 "use strict";
-function KgTLbs(weight) {
-    if (typeof weight === 'number')
-        return weight * 2.22;
-    else
-        return parseInt(weight) * 2.22;
+function getCustomer(id) {
+    return id === 0 ? null : { birtday: new Date() };
 }
-KgTLbs(10);
-KgTLbs('30kg');
+let Customer = getCustomer(1);
+console.log(Customer === null || Customer === void 0 ? void 0 : Customer.birtday);
 //# sourceMappingURL=index.js.map

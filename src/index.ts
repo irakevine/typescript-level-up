@@ -33,35 +33,45 @@
 //  KgTLbs('30kg')
 
 // INTERSECTION TYPES 
+// type Dragable = {
+//     drag:()=> void
+// }
+// type Resizable ={
+//     size:()=> void
+// }
+// type Uidev= Dragable & Resizable
+// let Textbox: Uidev = { 
+// drag:()=>{},
+// size:()=>{}
 
-type Dragable = {
-    drag:()=> void
-}
-type Resizable ={
-    size:()=> void
-}
-type Uidev= Dragable & Resizable
-let Textbox: Uidev = { 
-drag:()=>{},
-size:()=>{}
-
-}
+// }
 
 // LITERAL TYPES
+// type Quantity = 50  | 100 
+// let quantity :Quantity = 100
 
-type Quantity = 50  | 100 
-let quantity :Quantity = 100
+// type Metric = 'cm' |'mm';
 
-type Metric = 'cm' |'mm';
+// // NULLABLE
+// function greet(name: string | null | undefined){
+// if (name ){
+//     console.log(name.toUpperCase());
+// } else 
+// console.log('holla');
+// }
+// greet(undefined)
 
-// NULLABLE
-function greet(name: string | null | undefined){
-if (name ){
-    console.log(name.toUpperCase());
-    
-} else 
-console.log('holla');
+// OPTINAL CHAINING
 
-
+type Customer = {
+    birtday ? : Date
 }
-greet(undefined)
+function getCustomer(id:number): Customer |null | undefined {
+ return id ===0 ? null : { birtday:new Date() }
+}
+let Customer = getCustomer(1)
+console.log(Customer?.birtday?.getFullYear());
+
+ // CALL OPTIONAL 
+ let log : any = null
+ log?.('a')
