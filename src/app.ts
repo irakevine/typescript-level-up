@@ -1,15 +1,5 @@
-class Invoice {
- 
-constructor(
-    readonly client : string,
-    private details:string,
-    public amount: number
-){}
-format(){
-    return `${this.client} buy ${this.details} and pays  ${this.amount}`
-}
+import {Invoice}from './classes/invoice.js'
 
-}
 const invONe = new Invoice('kevine','works on the single react page with kane', 500)
 const invTwo = new Invoice('kellen','works on the single react page with ranedy', 200)
 let Invoices: Invoice[]=[]
