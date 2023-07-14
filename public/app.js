@@ -1,12 +1,12 @@
 "use strict";
 var Invoice = /** @class */ (function () {
-    function Invoice(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    function Invoice(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     Invoice.prototype.format = function () {
-        return "".concat(this.client, "buy ").concat(this.details, " and pays  ").concat(this.amount);
+        return "".concat(this.client, " buy ").concat(this.details, " and pays  ").concat(this.amount);
     };
     return Invoice;
 }());
@@ -15,7 +15,9 @@ var invTwo = new Invoice('kellen', 'works on the single react page with ranedy',
 var Invoices = [];
 Invoices.push(invONe);
 Invoices.push(invTwo);
-console.log(Invoices);
+Invoices.forEach(function (inv) {
+    console.log(inv.client, inv.amount, inv.format());
+});
 var form = document.querySelector('.new-item-form');
 var field = document.querySelector('#type');
 var toFrom = document.querySelector('#tofrom');
