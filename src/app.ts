@@ -6,7 +6,6 @@ import {HasFormater}from './interfaces/HasFormater.js'
 //list template instance
 const ul = document.querySelector('ul')!
 const list = new listTemplate(ul)
-
 const form = document.querySelector('.new-item-form') as HTMLFormElement
 const field = document.querySelector('#type') as HTMLSelectElement
 const toFrom= document.querySelector('#tofrom') as HTMLInputElement
@@ -26,7 +25,6 @@ form.addEventListener('submit',(e: Event ) =>{
 });
 // Generic and  adding enum 
 enum ResourseType { BOOK, FLAT, ORANGE, BREAD }
-
 interface  Resourse<T>{
     name:string;
     age: ResourseType;
