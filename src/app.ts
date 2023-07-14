@@ -1,28 +1,11 @@
 import {Invoice}from './classes/invoice.js'
+import { listTemplate } from './classes/listTemplate.js'
 import {Payment}from './classes/payment.js'
 import {HasFormater}from './interfaces/HasFormater.js'
 
-// let docOne : HasFormater 
-// let docTwo:HasFormater
-// docOne = new Invoice('Kevine','she is buying some goods',600)
-// docTwo = new Payment('Kevine','she is buying some goods',600)
-
-// let docs : HasFormater[]=[]
-// docs.push(docOne) 
-// docs.push(docTwo) 
-// console.log(docs)
-
-
-// const invONe = new Invoice('kevine','works on the single react page with kane', 500)
-// const invTwo = new Invoice('kellen','works on the single react page with ranedy', 200)
-// let Invoices: Invoice[]=[]
-// Invoices.push(invONe)
-// Invoices.push(invTwo)
-
-// Invoices.forEach(inv=>{
-//     console.log(inv.client, inv.amount,inv.format());
-    
-// })
+//list template instance
+const ul = document.querySelector('ul')!
+const list = new listTemplate(ul)
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement
 const field = document.querySelector('#type') as HTMLSelectElement
@@ -39,15 +22,5 @@ form.addEventListener('submit',(e: Event ) =>{
         docs = new Payment(toFrom.value, details.value, Amount.valueAsNumber)
     }
 
-    
-console.log(docs);
-
-   
-    console.log(
-        field.value,
-        toFrom.value,
-        details.value,
-        Amount.valueAsNumber 
-        );
-    
+    list.render(docs, field.value,'end')
 });

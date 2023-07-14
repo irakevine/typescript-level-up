@@ -8,7 +8,7 @@ export class Invoice implements  HasFormater{
         public amount: number
     ){}
     format(){
-        return `${this.client} buy ${this.details} and pays  ${this.amount}`
+        return `${this.client} owes ${this.amount} for ${this.details} `
     }
     
     }
