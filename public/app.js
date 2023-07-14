@@ -11,12 +11,14 @@ const details = document.querySelector('#details');
 const Amount = document.querySelector('#amount');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    let values;
+    values = [toFrom.value, details.value, Amount.valueAsNumber];
     let docs;
     if (field.value === 'invoice') {
-        docs = new Invoice(toFrom.value, details.value, Amount.valueAsNumber);
+        docs = new Invoice(...values);
     }
     else {
-        docs = new Payment(toFrom.value, details.value, Amount.valueAsNumber);
+        docs = new Payment(...values);
     }
     list.render(docs, field.value, 'end');
 });

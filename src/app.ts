@@ -13,12 +13,13 @@ const details = document.querySelector('#details') as HTMLInputElement
 const Amount = document.querySelector('#amount') as HTMLInputElement
 form.addEventListener('submit',(e: Event ) =>{
     e.preventDefault();
-
+   let values :[string, string,number]
+       values =[toFrom.value, details.value, Amount.valueAsNumber]
     let docs : HasFormater
     if(field.value === 'invoice'){
-        docs = new Invoice(toFrom.value, details.value, Amount.valueAsNumber)
+        docs = new Invoice(...values)
     }else{
-        docs = new Payment(toFrom.value, details.value, Amount.valueAsNumber)
+        docs = new Payment(...values)
     }
 
     list.render(docs, field.value,'end')
