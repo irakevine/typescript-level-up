@@ -24,3 +24,22 @@ form.addEventListener('submit',(e: Event ) =>{
 
     list.render(docs, field.value,'end')
 });
+// Generic
+
+interface  Resourse<T>{
+    name:string;
+    age: number;
+    data: T
+}
+const DocOne : Resourse <object>={
+    name:'renaike',
+    age: 69,
+    data:{text:'hero'}
+
+}
+const DocTwo : Resourse <string[]> ={
+    name:'Kellen',
+    age:65,
+    data: ['kunda','tradesional']
+}
+console.log(DocOne,DocTwo);

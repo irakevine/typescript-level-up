@@ -20,3 +20,14 @@ form.addEventListener('submit', (e) => {
     }
     list.render(docs, field.value, 'end');
 });
+const DocOne = {
+    name: 'renaike',
+    age: 69,
+    data: { text: 'hero' }
+};
+const DocTwo = {
+    name: 'Kellen',
+    age: 65,
+    data: ['kunda', 'tradesional']
+};
+console.log(DocOne, DocTwo);
