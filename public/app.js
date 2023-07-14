@@ -20,14 +20,22 @@ form.addEventListener('submit', (e) => {
     }
     list.render(docs, field.value, 'end');
 });
+// Generic and  adding enum 
+var ResourseType;
+(function (ResourseType) {
+    ResourseType[ResourseType["BOOK"] = 0] = "BOOK";
+    ResourseType[ResourseType["FLAT"] = 1] = "FLAT";
+    ResourseType[ResourseType["ORANGE"] = 2] = "ORANGE";
+    ResourseType[ResourseType["BREAD"] = 3] = "BREAD";
+})(ResourseType || (ResourseType = {}));
 const DocOne = {
     name: 'renaike',
-    age: 69,
+    age: ResourseType.BOOK,
     data: { text: 'hero' }
 };
 const DocTwo = {
     name: 'Kellen',
-    age: 65,
+    age: ResourseType.BREAD,
     data: ['kunda', 'tradesional']
 };
 console.log(DocOne, DocTwo);

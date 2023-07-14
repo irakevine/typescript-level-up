@@ -24,22 +24,23 @@ form.addEventListener('submit',(e: Event ) =>{
 
     list.render(docs, field.value,'end')
 });
-// Generic
+// Generic and  adding enum 
+enum ResourseType { BOOK, FLAT, ORANGE, BREAD }
 
 interface  Resourse<T>{
     name:string;
-    age: number;
+    age: ResourseType;
     data: T
 }
 const DocOne : Resourse <object>={
     name:'renaike',
-    age: 69,
+    age: ResourseType.BOOK,
     data:{text:'hero'}
 
 }
 const DocTwo : Resourse <string[]> ={
     name:'Kellen',
-    age:65,
+    age:ResourseType.BREAD,
     data: ['kunda','tradesional']
 }
 console.log(DocOne,DocTwo);
