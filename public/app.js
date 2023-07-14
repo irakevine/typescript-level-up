@@ -1,3 +1,15 @@
+const me = {
+    name: 'kellen',
+    age: 54,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log(amount);
+        return amount;
+    }
+};
+console.log(me);
 import { Invoice } from './classes/invoice.js';
 const invONe = new Invoice('kevine', 'works on the single react page with kane', 500);
 const invTwo = new Invoice('kellen', 'works on the single react page with ranedy', 200);
